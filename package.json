@@ -1,14 +1,27 @@
 {
-  "name": "static-site",
+  "name": "project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
   },
+  "scripts": {
+    "test": "node ./test/sample.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abi-Queen/Readme-Generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Abi-Queen/Readme-Generator/issues"
+  },
+  "homepage": "https://github.com/Abi-Queen/Readme-Generator#readme",
+  "description": ""
 }
