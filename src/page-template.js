@@ -24,7 +24,9 @@ function addBadge(license) {
         `;
     }*/
 
-    return `(https://img.shields.io/badge/license-${license}-blue.svg)`
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+    `
 
 };
 
@@ -41,7 +43,7 @@ module.exports = templateData => {
     //const {license, name, ...questionEmail} = templateData;
 
     return `
-[!]${addBadge(templateData.license)}
+${addBadge(templateData.license)}
 # Project Name
 ${templateData.name}
 ## Description
