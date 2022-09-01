@@ -1,5 +1,5 @@
 // add license badge at top of readme
-// QUESTION: licenseText or licenseChoice?
+// QUESTION: licenseText or licenseChoice bc inquirer checkbox rather than input?
 const addBadge = licenseChoice => {
     if (licenseChoice = 'Other or None') {
         return '';
@@ -32,7 +32,6 @@ const generateLicenseInfo = licenseInfoText => {
     ${licenseInfoText}
     `;
 };
-
 
 //export function to generate entire page
 module.exports = templateData => {

@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const generateReadme = require('./src/page-template');
 const {writeFile} = require('./utils/generateMarkdown');
 
+// capture user input to questions with inquirer
 const promptUser = () => {
     return inquirer.prompt([
         {
@@ -129,27 +130,12 @@ const promptUser = () => {
     ])
 };
 
-// if "other/none" for licenseChoice, option to describe
-//     .then(testData => {
-//         readmeData.test.push(testData);
-//         if (testData.confirmTest) {
-//             return promptTest(readmeData);
-//         } else {
-//             return readmeData;
-//         }
-//     });
-// };
-
 promptUser()
-    .then(promptDescription)
     .then(readmeData => {
-        return generateReadme(portfolioData);
+        return generateReadme(readmeData);
     })
     .then(pageMD => {
         return writeFile(pageMD);
-    })
-    .then(writeFileResponse => {
-        console.log(writeFileResponse);
     })
     .catch(err => {
         console.log(err);
