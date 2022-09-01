@@ -35,7 +35,7 @@ const promptUser = () => {
             name: 'installation',
             message: 'Please explain how to install your project.',
             validate: installationInput => {
-                if (nameInput) {
+                if (installationInput) {
                     return true;
                 } else {
                     console.log('Installation instructions are needed.');
@@ -48,10 +48,10 @@ const promptUser = () => {
             name: 'usage',
             message: 'Please explain how to use your project.',
             validate: usageInput => {
-                if (nameInput) {
+                if (usageInput) {
                     return true;
                 } else {
-                    console.log('We need a name.');
+                    console.log('Usage instructions are needed.');
                     return false;
                 }
             }
@@ -60,9 +60,47 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'license',
             message: 'Which license does your project use?',
-            choices: ['lic1', 'lic2', 'lic3']
+            choices: ['Apache License 2.0', 'ISC License', 'MIT License', 'GNU GPLv3']
         },
-        
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'Please explain how people can contriute to your project.',
+            validate: usageInput => {
+                if (contributionInput) {
+                    return true;
+                } else {
+                    console.log('Please explain how people can contriute to your project.');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Please describe your tests.',
+            validate: usageInput => {
+                if (testsInput) {
+                    return true;
+                } else {
+                    console.log('Please describe your tests.');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'What is your GitHub username?',
+            validate: usageInput => {
+                if (questionsInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub username.');
+                    return false;
+                }
+            }
+        }
     ])
 };
 
