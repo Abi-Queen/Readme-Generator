@@ -26,14 +26,21 @@ const addBadge = licenseChoice => {
     }
 };
 
+// add text input to license sec. if licenseChoice is "Other or None"
+const generateLicenseInfo = licenseInfoText => {
+    return `
+    ${licenseInfoText}
+    `;
+};
+
 
 //export function to generate entire page
 module.exports = templateData => {
     //destructure page data by section
-    const {description, contents, ...questionsEmail} = templateData;
+    const {licenseChoice, name, ...questionEmail} = templateData;
 
     return `
-    ####[![License](${addBadge(licenseChoice)})
+    [![License](${addBadge(licenseChoice)})
     #Project Name
     ${generateName(name)}
     ##Description
@@ -46,6 +53,7 @@ module.exports = templateData => {
     ${generateUsage(usage)}
     ##License
     ${generateLicense(license)}
+    ${generateLicenseInfo(licenseInfo)}
     ##Contribution
     ${generateContribution(contribution)}
     ##Tests

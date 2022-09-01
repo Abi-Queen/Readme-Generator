@@ -1,5 +1,5 @@
 const inquirer = require('inquirer'); 
-const generatePage = require('./src/page-template');
+const generateReadme = require('./src/page-template');
 const {writeFile} = require('./utils/generateMarkdown');
 
 const promptUser = () => {
@@ -61,6 +61,18 @@ const promptUser = () => {
             name: 'license',
             message: 'Which license does your project use?',
             choices: ['Apache License 2.0', 'ISC License', 'MIT License', 'GNU GPLv3', 'Other or None']
+        },
+        {
+            type: 'confirm',
+            name: 'confirmLicense',
+            message: 'Would you like to provide information about the license?',
+            default: false
+        },
+        {
+            type: 'input',
+            name: 'licenseInfo',
+            message: 'Please enter information about the license.',
+            when: ({confirmLicense}) => confirmLicense
         },
         {
             type: 'input',
