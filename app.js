@@ -91,7 +91,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'test',
-            message: 'Pleaes describe the tests you have run on your project and provide an example.',
+            message: 'Please describe the tests you have run on your project and provide an example.',
             validate: testInput => {
                 if (testInput) {
                     return true;

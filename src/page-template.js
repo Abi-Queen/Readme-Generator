@@ -1,5 +1,5 @@
 // add license badge at top of readme
-// QUESTION: licenseText or licenseChoice bc inquirer checkbox rather than input?
+// QUESTION: app stuck at ln 42; licenseText or licenseChoice bc inquirer checkbox rather than input?
 const addBadge = licenseChoice => {
     if (licenseChoice = 'Other or None') {
         return '';
