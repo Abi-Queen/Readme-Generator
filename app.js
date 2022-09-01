@@ -1,6 +1,7 @@
 const inquirer = require('inquirer'); 
 const generateReadme = require('./src/page-template');
 const {writeFile} = require('./utils/generateMarkdown');
+const fs = require("fs");
 
 // capture user input to questions with inquirer
 const promptUser = () => {
@@ -58,7 +59,7 @@ const promptUser = () => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'Which license does your project use?',
             choices: ['Apache License 2.0', 'ISC License', 'MIT License', 'GNU GPLv3', 'Other or None']
@@ -132,11 +133,13 @@ const promptUser = () => {
 
 promptUser()
     .then(readmeData => {
-        return generateReadme(readmeData);
+
+        fs.writeFileSync("./dist/README.md", generateReadme(readmeData), 'utf-8');
+        /*return generateReadme(readmeData);
     })
     .then(pageMD => {
         return writeFile(pageMD);
     })
     .catch(err => {
-        console.log(err);
+        console.log(err); */
     });

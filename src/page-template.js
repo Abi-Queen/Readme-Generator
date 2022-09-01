@@ -1,7 +1,7 @@
 // add license badge at top of readme
 // QUESTION: app stuck at ln 42; licenseText or licenseChoice bc inquirer checkbox rather than input?
-const addBadge = licenseChoice => {
-    if (licenseChoice = 'Other or None') {
+function addBadge(license) {
+    /*if (licenseChoice = 'Other or None') {
         return '';
     }
     else if (licenseChoice = 'Apache License 2.0') {
@@ -23,7 +23,10 @@ const addBadge = licenseChoice => {
         return `
         (https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
         `;
-    }
+    }*/
+
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+
 };
 
 // add text input to license sec. if licenseChoice is "Other or None"
@@ -36,30 +39,30 @@ const generateLicenseInfo = licenseInfoText => {
 //export function to generate entire page
 module.exports = templateData => {
     //destructure page data by section
-    const {licenseChoice, name, ...questionEmail} = templateData;
+    //const {license, name, ...questionEmail} = templateData;
 
     return `
-    [![License](${addBadge(licenseChoice)})
+    [![License](${addBadge(templateData.license)})
     #Project Name
-    ${generateName(name)}
+    ${templateData.name}
     ##Description
-    ${generateDescription(description)}
+    ${templateData.description}
     ##Table of Contents
-    ${generateContents(contents)}
+    ${templateData.contents}
     ##Installation
-    ${generateInstallation(installation)}
+    ${templateData.installation}
     ##Usage
-    ${generateUsage(usage)}
+    ${templateData.usage}
     ##License
-    ${generateLicense(license)}
-    ${generateLicenseInfo(licenseInfo)}
+    ${templateData.license}
+    ${templateData.licenseInfo}
     ##Contribution
-    ${generateContribution(contribution)}
+    ${templateData.contribution}
     ##Tests
-    ${generateTest(test)}
+    ${templateData.test}
     ##Questions
     Please contact me with quesitons at:
-    [GitHub](${generateQuestionLink(questionLink)})
-    [Email](${generateQuestionEmail(questionEmail)})
+    [GitHub](${templateData.questionLink})
+    [Email](${templateData.questionEmail})
     `;
 };
