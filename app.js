@@ -22,7 +22,7 @@ const promptUser = () => {
             name: 'description',
             message: 'Please describe your project. Suggested prompts: What was your motivation? Why did you build this project? What problem does it solve? What did you learn?',
             validate: descriptionInput => {
-                if (nameInput) {
+                if (descriptionInput) {
                     return true;
                 } else {
                     console.log('A description is needed.');
@@ -66,7 +66,7 @@ const promptUser = () => {
             type: 'input',
             name: 'contribution',
             message: 'Please explain how people can contriute to your project.',
-            validate: usageInput => {
+            validate: contributionInput => {
                 if (contributionInput) {
                     return true;
                 } else {
@@ -76,24 +76,30 @@ const promptUser = () => {
             }
         },
         {
+            type: 'confirm',
+            name: 'confirmTests',
+            message: 'Did you run tests on your project?',
+            default: false
+        },
+        {
             type: 'input',
-            name: 'tests',
-            message: 'Please describe your tests.',
-            validate: usageInput => {
-                if (testsInput) {
+            name: 'questionsLink',
+            message: 'What is your GitHub username?',
+            validate: questionsLinkInput => {
+                if (questionsLinkInput) {
                     return true;
                 } else {
-                    console.log('Please describe your tests.');
+                    console.log('Please enter your GitHub username.');
                     return false;
                 }
             }
         },
         {
             type: 'input',
-            name: 'questions',
-            message: 'What is your GitHub username?',
-            validate: usageInput => {
-                if (questionsInput) {
+            name: 'questionsEmail',
+            message: 'Please enter your email address.',
+            validate: questionsEmailInput => {
+                if (questionsEmailInput) {
                     return true;
                 } else {
                     console.log('Please enter your GitHub username.');
