@@ -42,27 +42,27 @@ module.exports = templateData => {
     //const {license, name, ...questionEmail} = templateData;
 
     return `
-    [![License](${addBadge(templateData.license)})
-    # Project Name
-    ${templateData.name}
-    ## Description
-    ${templateData.description}
-    ## Table of Contents
-    ${templateData.contents}
-    ## Installation
-    ${templateData.installation}
-    ## Usage
-    ${templateData.usage}
-    ## License
-    ${templateData.license}
-    ${templateData.licenseInfo}
-    ## Contribution
-    ${templateData.contribution}
-    ## Tests
-    ${templateData.test}
-    ## Questions
-    Please contact me with quesitons at:
-    [GitHub](${templateData.questionLink})
-    [Email](${templateData.questionEmail})
-    `;
+[![License](${addBadge(templateData.license)})
+# Project Name
+${templateData.name}
+## Description
+${templateData.description}
+## Table of Contents
+${templateData.contents}
+## Installation
+${templateData.installation}
+## Usage
+${templateData.usage}
+## License
+${templateData.license}
+${templateData.licenseInfo}
+## Contribution
+${templateData.contribution}
+## Tests
+${templateData.test}
+## Questions
+Please contact me with quesitons at:
+[GitHub](${templateData.questionLink})
+[Email](${templateData.questionEmail})
+`;
 };
