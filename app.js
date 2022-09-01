@@ -1,6 +1,6 @@
 const inquirer = require('inquirer'); 
 const generatePage = require('./src/page-template');
-const {writeFile} = require('.utils/generateMarkdown');
+const {writeFile} = require('./utils/generateMarkdown');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -60,7 +60,7 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'license',
             message: 'Which license does your project use?',
-            choices: ['Apache License 2.0', 'ISC License', 'MIT License', 'GNU GPLv3']
+            choices: ['Apache License 2.0', 'ISC License', 'MIT License', 'GNU GPLv3', 'none']
         },
         {
             type: 'input',
@@ -76,10 +76,17 @@ const promptUser = () => {
             }
         },
         {
-            type: 'confirm',
-            name: 'confirmTests',
-            message: 'Did you run tests on your project?',
-            default: false
+            type: 'input',
+            name: 'test',
+            message: 'Pleaes describe the tests you have run on your project and provide an example.',
+            validate: testInput => {
+                if (testInput) {
+                    return true;
+                } else {
+                    console.log('Please describe your tests.');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -108,7 +115,16 @@ const promptUser = () => {
             }
         }
     ])
-};
+// if doing confirm for test question above and a promptTest array
+//     .then(testData => {
+//         readmeData.test.push(testData);
+//         if (testData.confirmTest) {
+//             return promptTest(readmeData);
+//         } else {
+//             return readmeData;
+//         }
+//     });
+// };
 
 promptUser()
     .then(promptDescription)
