@@ -52,7 +52,7 @@ module.exports = templateData => {
     ${generateTest(test)}
     ##Questions
     Please contact me with quesitons at:
-    ${generateQuestionLink(questionLink)}
-    ${generateQuestionEmail(questionEmail)}
+    [GitHub](${generateQuestionLink(questionLink)})
+    [Email](${generateQuestionEmail(questionEmail)})
     `;
 };
