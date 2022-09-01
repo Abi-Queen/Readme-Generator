@@ -1,4 +1,5 @@
 // add license badge at top of readme
+// QUESTION: licenseText or licenseChoice?
 const addBadge = licenseChoice => {
     if (licenseChoice = 'Other or None') {
         return '';
@@ -33,15 +34,25 @@ module.exports = templateData => {
 
     return `
     ####[![License](${addBadge(licenseChoice)})
-    #${generateName(name)}
-    ##${generateDescription(description)}
-    ##${generateContents(contents)}
-    ##${generateInstallation(installation)}
-    ##${generateUsage(usage)}
-    ##${generateLicense(license)}
-    ##${generateContribution(contribution)}
-    ##${generateTest(test)}
-    ##${generateQuestionLink(questionLink)}
-    ##${generateQuestionEmail(questionEmail)}
+    #Project Name
+    ${generateName(name)}
+    ##Description
+    ${generateDescription(description)}
+    ##Table of Contents
+    ${generateContents(contents)}
+    ##Installation
+    ${generateInstallation(installation)}
+    ##Usage
+    ${generateUsage(usage)}
+    ##License
+    ${generateLicense(license)}
+    ##Contribution
+    ${generateContribution(contribution)}
+    ##Tests
+    ${generateTest(test)}
+    ##Questions
+    Please contact me with quesitons at:
+    ${generateQuestionLink(questionLink)}
+    ${generateQuestionEmail(questionEmail)}
     `;
 };

@@ -115,7 +115,9 @@ const promptUser = () => {
             }
         }
     ])
-// if doing confirm for test question above and a promptTest array
+};
+
+// if "other/none" for licenseChoice, option to describe
 //     .then(testData => {
 //         readmeData.test.push(testData);
 //         if (testData.confirmTest) {
