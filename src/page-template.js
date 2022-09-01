@@ -25,7 +25,7 @@ function addBadge(license) {
         `;
     }*/
 
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+    return `(https://img.shields.io/badge/license-${license}-blue.svg)`
 
 };
 
