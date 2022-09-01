@@ -43,24 +43,24 @@ module.exports = templateData => {
 
     return `
     [![License](${addBadge(templateData.license)})
-    #Project Name
+    # Project Name
     ${templateData.name}
-    ##Description
+    ## Description
     ${templateData.description}
-    ##Table of Contents
+    ## Table of Contents
     ${templateData.contents}
-    ##Installation
+    ## Installation
     ${templateData.installation}
-    ##Usage
+    ## Usage
     ${templateData.usage}
-    ##License
+    ## License
     ${templateData.license}
     ${templateData.licenseInfo}
-    ##Contribution
+    ## Contribution
     ${templateData.contribution}
-    ##Tests
+    ## Tests
     ${templateData.test}
-    ##Questions
+    ## Questions
     Please contact me with quesitons at:
     [GitHub](${templateData.questionLink})
     [Email](${templateData.questionEmail})
