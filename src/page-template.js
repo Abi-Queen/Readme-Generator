@@ -42,7 +42,7 @@ module.exports = templateData => {
     //const {license, name, ...questionEmail} = templateData;
 
     return `
-[![License](${addBadge(templateData.license)})
+${addBadge(templateData.license)}
 # Project Name
 ${templateData.name}
 ## Description
