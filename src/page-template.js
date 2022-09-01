@@ -1,5 +1,4 @@
 // add license badge at top of readme
-// QUESTION: app stuck at ln 42; licenseText or licenseChoice bc inquirer checkbox rather than input?
 function addBadge(license) {
     /*if (licenseChoice = 'Other or None') {
         return '';
@@ -42,7 +41,7 @@ module.exports = templateData => {
     //const {license, name, ...questionEmail} = templateData;
 
     return `
-${addBadge(templateData.license)}
+[!]${addBadge(templateData.license)}
 # Project Name
 ${templateData.name}
 ## Description
