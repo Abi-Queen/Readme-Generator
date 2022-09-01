@@ -60,7 +60,7 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'license',
             message: 'Which license does your project use?',
-            choices: ['Apache License 2.0', 'ISC License', 'MIT License', 'GNU GPLv3', 'none']
+            choices: ['Apache License 2.0', 'ISC License', 'MIT License', 'GNU GPLv3', 'Other or None']
         },
         {
             type: 'input',
