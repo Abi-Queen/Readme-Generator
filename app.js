@@ -65,18 +65,6 @@ const promptUser = () => {
             choices: ['Apache License 2.0', 'ISC License', 'MIT License', 'GNU GPLv3', 'Other or None']
         },
         {
-            type: 'confirm',
-            name: 'confirmLicense',
-            message: 'Would you like to provide information about the license?',
-            default: false
-        },
-        {
-            type: 'input',
-            name: 'licenseInfo',
-            message: 'Please enter information about the license.',
-            when: ({confirmLicense}) => confirmLicense
-        },
-        {
             type: 'input',
             name: 'contribution',
             message: 'Please explain how people can contriute to your project.',
