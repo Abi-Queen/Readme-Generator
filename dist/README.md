@@ -1,9 +1,9 @@
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
         
 # Project Name
 cinnamon
 ## Description
-garlic
+cloves
 ## Table of Contents
 - [Description](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#description)
 - [Installation](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#installation)
@@ -13,15 +13,15 @@ garlic
 - [Tests](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#tests)
 - [Questions](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#questions)
 ## Installation
-cardamom
+garlic
 ## Usage
-ginger
+vanilla
 ## License
-ISC License
+MIT License
 ## Contribution
-cilantro
+cayenne
 ## Tests
-saffron
+cardamom
 ## Questions
 Please contact me with quesitons at:
 [GitHub](undefined)

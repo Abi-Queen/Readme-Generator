@@ -5,7 +5,7 @@ This project is a Node.js application that uses command-line input to generate a
 [Here is the GitHub repo.](https://github.com/Abi-Queen/Readme-Generator)
 
 ## Video demo
-The app is demonstrated in this [video walkthrough](drive-link).
+The app is demonstrated in this [video walkthrough](https://drive.google.com/file/d/1Oy514RMs3yCzgb3zgxMsBI54qjWXgSIw/view).
 
 
 ## GitHub

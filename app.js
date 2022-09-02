@@ -123,11 +123,4 @@ promptUser()
     .then(readmeData => {
 
         fs.writeFileSync("./dist/README.md", generateReadme(readmeData), 'utf-8');
-        /*return generateReadme(readmeData);
-    })
-    .then(pageMD => {
-        return writeFile(pageMD);
-    })
-    .catch(err => {
-        console.log(err); */
     });
