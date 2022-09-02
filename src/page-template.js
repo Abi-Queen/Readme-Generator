@@ -51,13 +51,13 @@ ${templateData.name}
 ## Description
 ${templateData.description}
 ## Table of Contents
-[Description](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#description)
-[Installation](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#installation)
-[Usage](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#usage)
-[License](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#license)
-[Contribution](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#contribution)
-[Tests](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#tests)
-[Questions](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#questions)
+- [Description](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#description)
+- [Installation](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#installation)
+- [Usage](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#usage)
+- [License](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#license)
+- [Contribution](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#contribution)
+- [Tests](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#tests)
+- [Questions](https://github.com/Abi-Queen/Readme-Generator/tree/feature/fix-license/dist#questions)
 ## Installation
 ${templateData.installation}
 ## Usage
